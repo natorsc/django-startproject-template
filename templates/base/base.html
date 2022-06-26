@@ -1,0 +1,42 @@
+<!doctype html>{% load static %}
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    {% if not debug %}
+    {% include 'base/components/google.html' %}
+    {% endif %}
+    <meta content="{% block author %}Renato Cruz{% endblock %}" name="author"/>
+    <meta content="{% block keywords %}Python, Django, JavaScrit, Ajax, API, {% endblock %}" name="keywords"/>
+    <meta content="{% block description %}{{ project_name }}{% endblock %}" name="description">
+    <link href="{% static 'favicon/icon.png' %}" rel="icon" type="image/png">
+    <title>{% block title %}{% endblock %} - {{ project_name }}</title>
+    {% block css %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet">
+    {% if debug %}
+    <link href="{% static 'base/css/classless.css' %}" rel="stylesheet">
+    <link href="{% static 'base/css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'base/css/themes.css' %}" rel="stylesheet">
+    {% else %}
+    <link href="{% static 'base/css/classless-min.css' %}" rel="stylesheet">
+    <link href="{% static 'base/css/base-min.css' %}" rel="stylesheet">
+    <link href="{% static 'base/css/themes-min.css' %}" rel="stylesheet">
+    {% endif %}
+    {% endblock %}
+</head>
+
+<body>
+{% include 'base/components/navbar.html' %}
+{% block content %}{% endblock %}
+{% include 'base/components/footer.html' %}
+{% block js %}
+{% if debug %}
+<script src="{% static 'base/js/base.js' %}"></script>
+{% else %}
+<script src="{% static 'base/js/base-min.js' %}"></script>
+{% endif %}
+{% endblock %}
+</body>
+
+</html>

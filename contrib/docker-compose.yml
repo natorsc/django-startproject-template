@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  memcached:
+    container_name: memcached
+    image: memcached:1.6.12
+    ports:
+      - "11211:11211"
+  redis:
+    container_name: memcached
+    image: redis:6.2.6
+    ports:
+      - "6379:6379"
+  postgres:
+    container_name: PostgreSQL
+    image: postgres:14.1
+    restart: on-failure
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: database_name

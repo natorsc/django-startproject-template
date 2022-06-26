@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %}{% load static %}
+{% block title %}Profile: {{ user.get_username }}{% endblock %}
+{% block content %}
+<figure class="text-center">
+    <img alt="{{ user.get_username }}" src="{% static 'accounts/images/profile.svg' %}">
+    <figcaption>@{{ user.get_username }}</figcaption>
+</figure>
+{% endblock %}

@@ -1,0 +1,23 @@
+<nav>
+    <ul>
+        <li>Nome do site</li>
+        <li>
+            <a href="{% url 'home:index' %}">Home</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="float-right sticky">
+            <a href="#"><i class="bi bi-person-square"></i>&nbsp;&nbsp;{{ user.username }}</a>
+            <ul>
+                <li><a href="{% url 'accounts:profile' %}">Perfil</a></li>
+                <hr>
+                <li><a href="{% url 'admin:index' %}">Configurações</a></li>
+                <hr>
+                <li><a href="{% url 'logout' %}">Sair</a></li>
+            </ul>
+        </li>
+        {% else %}
+        <li class="float-right sticky"><a href="{% url 'accounts:signup' %}">Sign up</a></li>
+        <li class="float-right sticky"><a href="{% url 'login' %}"><b>Log in</b></a></li>
+        {% endif %}
+    </ul>
+</nav>

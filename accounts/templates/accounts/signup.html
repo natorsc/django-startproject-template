@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block title %}Criar conta{% endblock %}
+{% block content %}
+<form method="post">{% csrf_token %}
+    <fieldset>
+        <legend>Criar conta</legend>
+        {{ form.as_p }}
+        <br>
+        <button type="submit">Criar</button>
+    </fieldset>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+.rem-2 {
+  font-size: 2rem;
+}
+
+.rem-10 {
+  font-size: 5rem;
+}
+
+
+ul.errorlist {
+  font-size: smaller;
+  color: red;
+
+}
+
+.text-center {
+  text-align: center;
+}

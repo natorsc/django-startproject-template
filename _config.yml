@@ -1,0 +1,7 @@
+title: Django startproject template
+description: Template para iniciar um novo projeto com a linguagem de programação Python e o framework web Django.
+show_downloads: true
+theme: jekyll-theme-cayman
+url: "https://django.justcode.com.br"
+plugins:
+  - jekyll-sitemap

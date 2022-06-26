@@ -1,0 +1,30 @@
+<footer style="text-align: center;">
+    <hr>
+    <p>
+        <a href="{% url 'home:index' %}"><strong>APPs justCode</strong></a>
+        desenvolvido por <a href="https://blog.justcode.com.br" target="_blank">Renato Cruz</a>.&nbsp;&nbsp;
+        © 2022 - {% now "Y" %} Company, Inc.
+    </p>
+    <p>
+        <a href="https://github.com/natorsc" target="_blank"><i class="bi bi-github rem-2"></i></a>&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/natorsc/" target="_blank"><i class="bi bi-linkedin rem-2"></i></a>
+    </p>
+    <p>
+        Temas:
+        <select id="theme" onchange="switchTheme()">
+            <optgroup label="Temas">
+                <option value="">Selecionar tema</option>
+                <option value="Light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="sepia">Sepia</option>
+                <option value="milligram">Milligram</option>
+                <option value="pure">Pure</option>
+                <option value="sakura">Sakura</option>
+                <option value="skeleton">Skeleton</option>
+                <option value="bootstrap">Bootstrap</option>
+                <option value="medium">Medium</option>
+                <option value="tufte">Tufte</option>
+            </optgroup>
+        </select>
+    </p>
+</footer>
