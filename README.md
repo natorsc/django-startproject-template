@@ -4,6 +4,8 @@ Template para iniciar um novo projeto com a linguagem de programação Python e 
 
 ## Como usar
 
+### Pip (venv)
+
 ```bash
 mkdir nome-do-projeto && cd nome-do-projeto
 ```
@@ -20,13 +22,27 @@ pip install django
 django-admin startproject \
 _config \
 . \
---extension md,txt \
+--extension md,sh,txt \
 --name=Procfile \
 --template https://github.com/natorsc/django-startproject-template/archive/main.zip
 ```
 
 ```bash
 pip install -r requirements-dev.txt
+```
+
+```bash
+python contrib/gen_basic_conf.py
+```
+
+```bash
+python manage.py runserver
+```
+
+ou
+
+```bash
+./gunicorn.sh
 ```
 
 ---
